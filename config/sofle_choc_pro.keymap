@@ -182,3 +182,9 @@
         };
     };
 };
+
+// Allow tap-then-hold to repeat the tap key (e.g. hold backspace to delete
+// multiple chars) on all layer-taps. Hold without a prior tap still switches layer.
+&lt {
+    quick-tap-ms = <200>;
+};
