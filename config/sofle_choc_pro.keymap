@@ -55,14 +55,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <54 55>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -82,7 +75,7 @@
 &kp ESC    &kp Q            &kp W            &kp F         &kp P              &kp B        &kp J                                    &kp L               &kp U         &kp Y             &kp SEMI     &kp BSPC
 &kp TAB    &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp G        &kp M                                    &hmr RIGHT_SHIFT N  &hmr RCTRL E  &hmr RIGHT_ALT I  &hmr RGUI O  &kp SQT
 &kp LSHFT  &kp Z            &kp X            &kp C         &lt 8 D            &kp V        &kp C_MUTE  &kp C_PLAY  &kp K            &kp H               &kp COMMA     &kp DOT           &kp FSLH     &kp RSHFT
-                            &kp LGUI         &kp LALT      &kp LCTRL          &lt 3 SPACE  &lt 2 TAB   &kp RET     &lt 1 BACKSPACE  &lt 4 DELETE        &kp RALT      &kp RGUI
+                            &kp LGUI         &kp LALT      &kp LCTRL          &lt 3 SPACE  &lt 2 TAB   &lt 5 RET   &lt 1 BACKSPACE  &lt 4 DELETE        &kp RALT      &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -160,14 +153,16 @@
             >;
         };
 
-        layer_5 {
+        escape {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &kp ESCAPE  &trans  &trans  &trans  &trans  &trans
             >;
+
+            label = "escape";
         };
 
         layer_6 {
