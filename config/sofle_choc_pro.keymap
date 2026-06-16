@@ -47,6 +47,12 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
         };
+
+        encoder_bt: behavior_sensor_rotate_bt {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&bt BT_PRV>, <&bt BT_NXT>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -72,7 +78,7 @@
                             &kp LGUI         &kp LALT      &kp LCTRL          &lt 3 SPACE  &lt 2 TAB   &lt 5 RET   &lt 1 BACKSPACE  &lt 4 DELETE        &kp RALT      &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &encoder_bt>;
         };
 
         symbol_layer {
