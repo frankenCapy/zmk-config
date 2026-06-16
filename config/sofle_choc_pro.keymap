@@ -51,7 +51,7 @@
         encoder_bt: behavior_sensor_rotate_bt {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&bt BT_PRV>, <&bt BT_NXT>;
+            bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>;
         };
     };
 
